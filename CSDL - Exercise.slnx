@@ -1,0 +1,10 @@
+<Solution>
+  <Project Path="ConsoleApp1/Session 2.csproj" />
+  <Project Path="Session 1/Session 1.csproj" />
+  <Project Path="Session 3/Session 3.csproj" />
+  <Project Path="Session 4/Session 4.csproj" />
+  <Project Path="Session 5/Session 5.csproj" />
+  <Project Path="Session 6/Session 6.csproj" />
+  <Project Path="Session 7/Session 7.csproj" />
+  <Project Path="Session 8/Session 8.csproj" />
+</Solution>
