@@ -35,15 +35,23 @@ public class Program
 
         //Rectangle Pattern with Number
         //rectanglePatternWithNumber();
-        //10.Bài 13. Rectangle Pattern with Number
-        Console.Write("Enter a number: ");
-        int nb = int.Parse(Console.ReadLine());
-        Console.WriteLine("{0}{0}{0}", nb);
-        for (int i = 0; i < 3; i++)
-        {
-            Console.WriteLine("{0} {0}", nb);
-        }
-        Console.WriteLine("{0}{0}{0}", nb);
+
+        //Remove Character by Index
+        //removeCharacter();
+
+        //Swap First and Last Characters
+        //swapFirstAndLastChar();
+
+        //Add First Character to Front and Back
+        //addFirstCharToFrontAndBack();
+
+        //Check Positive and Negative Pair
+        //checkPositiveNegativePair();
+
+        //Sum or Triple Sum of Integers
+        sumOrTripleSumOfIntegers();
+
+
 
     }
     public static string printName()
@@ -171,13 +179,77 @@ public class Program
                     {
                         Console.Write(" ");
                     }
-                    
+
                 }
             }
 
             Console.WriteLine();
         }
-    } 
 
     }
+    public static void removeCharacter()
+    {
+        string str = "w3resource";
+        string str1 = str.Remove(1, 1);
+        string str2 = str.Remove(9, 1);
+        string str3 = str.Remove(0, 1);
+        Console.WriteLine($"Original string: {str}");
+        Console.WriteLine("After removing characters:");
+        Console.WriteLine($"Remove character at index 1: {str1}");
+        Console.WriteLine($"Remove character at index 9: {str2}");
+        Console.WriteLine($"remove character at index 0: {str3}");
+    }
+    public static void swapFirstAndLastChar()
+    {
+        string str = "w3resource";
+
+        char firstChar = str[0];
+        char lastChar = str[str.Length - 1];
+        string middlePart = str[1..^1];
+        string swappedStr = lastChar + middlePart + firstChar;
+        Console.WriteLine($"Original string: {str}");
+        Console.WriteLine($"String after swapping first and last characters: {swappedStr}");
+    }
+    public static void addFirstCharToFrontAndBack()
+    {
+        string str = "The quick brown fox jumps over the lazy dog.";
+        char firstChar = str[0];
+        string result = firstChar + str + firstChar;
+        Console.WriteLine($"String after adding first character to front and back: {result}");
+    }
+    public static void checkPositiveNegativePair()
+    {
+        Console.Write("Input first number: ");
+        int num1 = int.Parse(Console.ReadLine());
+        Console.Write("Input second number: ");
+        int num2 = int.Parse(Console.ReadLine());
+        if ((num1 > 0 && num2 < 0) || (num1 < 0 && num2 > 0))
+        {
+            Console.WriteLine("The numbers are a positive and negative pair.");
+        }
+        else
+        {
+            Console.WriteLine("The numbers are not a positive and negative pair.");
+        }
+    }
+
+    public static void sumOrTripleSumOfIntegers()
+    {
+        Console.Write("Input first number: ");
+        int num1 = int.Parse(Console.ReadLine());
+        Console.Write("Input second number: ");
+        int num2 = int.Parse(Console.ReadLine());
+        if (num1 == num2)
+        {
+            int tripleSum = 3 * (num1 + num2);
+            Console.WriteLine($"The numbers are equal. Triple of their sum is: {tripleSum}");
+        }
+        else
+        {
+            int sum = num1 + num2;
+            Console.WriteLine($"The numbers are not equal. Their sum is: {sum}");
+        }
+    }
+
+}
     
