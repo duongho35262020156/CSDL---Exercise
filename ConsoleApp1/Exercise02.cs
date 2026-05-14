@@ -49,9 +49,25 @@ public class Program
         //checkPositiveNegativePair();
 
         //Sum or Triple Sum of Integers
-        sumOrTripleSumOfIntegers();
+        //sumOrTripleSumOfIntegers();
 
+        //Absolute Difference or Double It
+        //absoluteDifferenceOrDoubleIt();
 
+        //Check for 20 or Sum Equals 20
+        //checkFor20OrSumEquals20();
+
+        //Check Within 20 of 100 or 200
+        //checkWithin20Of100Or200();
+
+        //Convert String to Lowercase
+        //convertStringToLowercase();
+
+        //Find Longest Word in String
+        //findLongestWordInString();
+
+        //Print Odd Numbers from 1 to 99
+        //printOddnumbers();
 
     }
     public static string printName()
@@ -250,6 +266,90 @@ public class Program
             Console.WriteLine($"The numbers are not equal. Their sum is: {sum}");
         }
     }
+    public static void absoluteDifferenceOrDoubleIt()
+    {
+        Console.Write("Input first number: ");
+        int num1 = int.Parse(Console.ReadLine());
+        Console.Write("Input second number: ");
+        int num2 = int.Parse(Console.ReadLine());
+        int difference = Math.Abs(num1 - num2);
+
+        if (num1 > num2)
+        {
+            Console.WriteLine($"The first number is greater. Absolute difference is: {difference * 2}");
+        }
+        else if (num2 > num1)
+        {
+
+            Console.WriteLine($"The second number is greater. Absolute difference is: {difference}");
+        }
+        else
+        {
+            int doubleValue = 2 * num1; // or 2 * num2 since they are equal
+            Console.WriteLine($"The numbers are equal. Double of the value is: {doubleValue}");
+        }
+    }
+    public static void checkFor20OrSumEquals20()
+    {
+        Console.Write("Input first number: ");
+        int num1 = int.Parse(Console.ReadLine());
+        Console.Write("Input second number: ");
+        int num2 = int.Parse(Console.ReadLine());
+        if (num1 == 20 || num2 == 20 || (num1 + num2) == 20)
+        {
+            Console.WriteLine("True");
+        }
+        else
+        {
+            Console.WriteLine("False");
+        }
+
+    }
+    public static void checkWithin20Of100Or200()
+    {
+        Console.Write("Input a number: ");
+        int num = int.Parse(Console.ReadLine());
+        if (Math.Abs(100 - num) <= 20 || Math.Abs(200 - num) <= 20)
+        {
+            Console.WriteLine("True");
+        }
+        else
+        {
+            Console.WriteLine("False");
+        }
+
+    }
+    public static void convertStringToLowercase()
+    {
+        Console.Write("Input a string: ");
+        string input = Console.ReadLine();
+        string lowercaseString = input.ToLower();
+        Console.WriteLine($"String in lowercase: {lowercaseString}");
+    }
+    public static void findLongestWordInString()
+    {
+
+        string input = "Write a C# Sharp Program to display the following pattern using the alphabet.";
+        string[] words = input.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+        string longestWord = "";
+        foreach (string word in words)
+        {
+            if (word.Length > longestWord.Length)
+            {
+                longestWord = word;
+            }
+        }
+        Console.WriteLine($"The longest word in the string is: {longestWord}");
+    }
+    public static void printOddnumbers()
+    {
+        Console.WriteLine("Odd numbers from 1 to 99:");
+        for (int i = 1; i < 100; i++)
+        { if (i % 2 != 0)
+            {
+                Console.Write($"{i}, ");
+            }
+        }
+    }
 
 }
-    
